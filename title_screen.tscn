@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bri4l7ve7oyby"]
+[gd_scene load_steps=4 format=3 uid="uid://bri4l7ve7oyby"]
 
+[ext_resource type="Script" path="res://title_screen.gd" id="1_feukj"]
 [ext_resource type="Texture2D" uid="uid://cu7u083vr4sf1" path="res://main_menu.png" id="1_kf7l7"]
 [ext_resource type="Texture2D" uid="uid://ctpaw8igsoq0f" path="res://start_game_button.png" id="2_xn8yc"]
 
@@ -10,11 +11,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_feukj")
 
 [node name="Logo" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(600, 320)
-scale = Vector2(5.25, 5.25)
+position = Vector2(608, 328)
+scale = Vector2(5.5, 5.5)
 texture = ExtResource("1_kf7l7")
 
 [node name="StartGame" type="TextureButton" parent="."]
@@ -25,11 +27,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -232.0
-offset_top = -104.0
-offset_right = -104.0
-offset_bottom = -88.0
+offset_left = -208.0
+offset_top = -88.0
+offset_right = -80.0
+offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(5.25, 5.25)
 texture_normal = ExtResource("2_xn8yc")
+
+[connection signal="mouse_entered" from="StartGame" to="." method="_on_start_game_mouse_entered"]
+[connection signal="mouse_exited" from="StartGame" to="." method="_on_start_game_mouse_exited"]
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
