@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmdkp881rrotd"
-path="res://.godot/imported/wire_box.png-821b17521e879c4542f386f329e2fb71.ctex"
+path="res://.godot/imported/wire_box.png-4eb949a2cd76078a86c3f29ccfc69dd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wire_box.png"
-dest_files=["res://.godot/imported/wire_box.png-821b17521e879c4542f386f329e2fb71.ctex"]
+source_file="res://main/wire_box.png"
+dest_files=["res://.godot/imported/wire_box.png-4eb949a2cd76078a86c3f29ccfc69dd5.ctex"]
 
 [params]
 

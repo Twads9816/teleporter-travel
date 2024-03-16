@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxxv0cb2yq86m"]
+
+[ext_resource type="PackedScene" uid="uid://bewmm7oyogmmp" path="res://cable/pin/pin.tscn" id="1_6xqkp"]
+[ext_resource type="Script" path="res://cable/cable.gd" id="1_8div1"]
+
+[node name="Cable" type="Node2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_8div1")
+
+[node name="Pin1" parent="." instance=ExtResource("1_6xqkp")]
+position = Vector2(-25, 0)
+scale = Vector2(1, 1)
+
+[node name="Pin2" parent="." instance=ExtResource("1_6xqkp")]
+position = Vector2(25, 0)
+scale = Vector2(1, 1)
+
+[node name="Wire" type="Line2D" parent="."]
+points = PackedVector2Array(-25, 0, 25, 0)
+width = 5.0
+
+[connection signal="moved" from="Pin1" to="." method="_on_pin_1_moved"]
+[connection signal="moved" from="Pin2" to="." method="_on_pin_2_moved"]

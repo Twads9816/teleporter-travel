@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b56iyxujulh2t"
-path="res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
+uid="uid://v8pfgqq2jelg"
+path="res://.godot/imported/pin_cover.png-7d1edb1b4a751869a052b1e851450fd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background.png"
-dest_files=["res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"]
+source_file="res://cable/pin/pin_cover.png"
+dest_files=["res://.godot/imported/pin_cover.png-7d1edb1b4a751869a052b1e851450fd4.ctex"]
 
 [params]
 
