@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bewmm7oyogmmp"]
 
-[ext_resource type="Script" path="res://cable/pin/pin.gd" id="1_mwlg3"]
-[ext_resource type="Texture2D" uid="uid://v8pfgqq2jelg" path="res://cable/pin/pin_cover.png" id="2_wlmcf"]
+[ext_resource type="Script" path="res://main/cable/pin/pin.gd" id="1_mwlg3"]
+[ext_resource type="Texture2D" uid="uid://v8pfgqq2jelg" path="res://main/cable/pin/pin_cover.png" id="2_wlmcf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oru7l"]
 radius = 4.0

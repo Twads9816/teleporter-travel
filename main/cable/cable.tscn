@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxxv0cb2yq86m"]
 
-[ext_resource type="PackedScene" uid="uid://bewmm7oyogmmp" path="res://cable/pin/pin.tscn" id="1_6xqkp"]
-[ext_resource type="Script" path="res://cable/cable.gd" id="1_8div1"]
+[ext_resource type="PackedScene" uid="uid://bewmm7oyogmmp" path="res://main/cable/pin/pin.tscn" id="1_6xqkp"]
+[ext_resource type="Script" path="res://main/cable/cable.gd" id="1_8div1"]
 
 [node name="Cable" type="Node2D"]
 scale = Vector2(5, 5)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v8pfgqq2jelg"
-path="res://.godot/imported/pin_cover.png-7d1edb1b4a751869a052b1e851450fd4.ctex"
+uid="uid://bcs6pgv6kdbp0"
+path="res://.godot/imported/lose_screen.png-3280c8a38f2c1b805e70a4fba4d5b7c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cable/pin/pin_cover.png"
-dest_files=["res://.godot/imported/pin_cover.png-7d1edb1b4a751869a052b1e851450fd4.ctex"]
+source_file="res://main/lose_screen.png"
+dest_files=["res://.godot/imported/lose_screen.png-3280c8a38f2c1b805e70a4fba4d5b7c1.ctex"]
 
 [params]
 

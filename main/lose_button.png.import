@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctpaw8igsoq0f"
-path="res://.godot/imported/start_game_button.png-4f6a18d14a120b6f7a8e3b5564dd0fb2.ctex"
+uid="uid://drync6848svpr"
+path="res://.godot/imported/lose_button.png-3a0273ae6cc624a231ff825f3128b87f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://start_game_button.png"
-dest_files=["res://.godot/imported/start_game_button.png-4f6a18d14a120b6f7a8e3b5564dd0fb2.ctex"]
+source_file="res://main/lose_button.png"
+dest_files=["res://.godot/imported/lose_button.png-3a0273ae6cc624a231ff825f3128b87f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://27canlwxlwh4"
-path="res://.godot/imported/tele_button_unpressed.png-8bbbd9fd782a169b8044d519340c7985.ctex"
+uid="uid://ctpaw8igsoq0f"
+path="res://.godot/imported/start_game_button.png-a8f5f9cd23e7a56da5c3c3391fc62afd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tele_button_unpressed.png"
-dest_files=["res://.godot/imported/tele_button_unpressed.png-8bbbd9fd782a169b8044d519340c7985.ctex"]
+source_file="res://title_screen/start_game_button.png"
+dest_files=["res://.godot/imported/start_game_button.png-a8f5f9cd23e7a56da5c3c3391fc62afd.ctex"]
 
 [params]
 

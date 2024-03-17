@@ -17,12 +17,13 @@ func _unhandled_input(event):
 	if picked:
 		if event.is_action_released("click"):
 			picked = false
-			if Socket and not Socket.color_id:
+			if Socket:
 				#Move
 				global_position = Socket.global_position
 				moved.emit(position)
 				#Plug
 				Socket.color_id = color_id
+				Socket.pin = self
 				plugged = true
 			get_viewport().set_input_as_handled()
 		elif event is InputEventMouseMotion:

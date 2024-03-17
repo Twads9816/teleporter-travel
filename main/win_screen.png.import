@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgorme71p62fx"
-path="res://.godot/imported/win_button.png-0de68403bf282fffaea90bb909c38500.ctex"
+uid="uid://dwvh3cc4gy3wg"
+path="res://.godot/imported/win_screen.png-7b286f5d14c66c3473dc47c2be4a385c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://win_button.png"
-dest_files=["res://.godot/imported/win_button.png-0de68403bf282fffaea90bb909c38500.ctex"]
+source_file="res://main/win_screen.png"
+dest_files=["res://.godot/imported/win_screen.png-7b286f5d14c66c3473dc47c2be4a385c.ctex"]
 
 [params]
 

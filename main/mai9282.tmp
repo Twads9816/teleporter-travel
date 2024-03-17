@@ -1,25 +1,22 @@
-[gd_scene load_steps=57 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=45 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
 [ext_resource type="Texture2D" uid="uid://bmdkp881rrotd" path="res://main/wire_box.png" id="2_1d34e"]
+[ext_resource type="Texture2D" uid="uid://27canlwxlwh4" path="res://tele_button_unpressed.png" id="3_8anf8"]
 [ext_resource type="Texture2D" uid="uid://bav7wocvrid4i" path="res://main/tele_button_pressed.png" id="4_51g7t"]
-[ext_resource type="Texture2D" uid="uid://27canlwxlwh4" path="res://main/tele_button_unpressed.png" id="4_ee2d6"]
-[ext_resource type="PackedScene" uid="uid://dbi7g6upedkdn" path="res://main/socket/socket.tscn" id="6_qip3o"]
-[ext_resource type="PackedScene" uid="uid://bxxv0cb2yq86m" path="res://main/cable/cable.tscn" id="7_jo1ta"]
+[ext_resource type="PackedScene" uid="uid://bxxv0cb2yq86m" path="res://cable/cable.tscn" id="6_gmmhb"]
+[ext_resource type="PackedScene" uid="uid://dbi7g6upedkdn" path="res://socket/socket.tscn" id="6_slrjl"]
 [ext_resource type="Texture2D" uid="uid://v0rl02w8d5bw" path="res://square.png" id="8_3uhom"]
 [ext_resource type="Texture2D" uid="uid://ca1fatrv13uyk" path="res://main/trust_meter.png" id="8_45rat"]
+[ext_resource type="Texture2D" uid="uid://dkdylcyypteg4" path="res://flags_sheet.png" id="8_nr0ed"]
 [ext_resource type="Texture2D" uid="uid://c2o6k3jv385ba" path="res://main/trust_bar.png" id="9_h0ka3"]
 [ext_resource type="Texture2D" uid="uid://q7avnfe6bhui" path="res://main/person_sheet.png" id="10_ncgpq"]
 [ext_resource type="Texture2D" uid="uid://bu4drsyh2iu07" path="res://main/speech_bubble.png" id="11_gkyl7"]
-[ext_resource type="Texture2D" uid="uid://dkdylcyypteg4" path="res://main/flags_sheet.png" id="13_w10s6"]
 [ext_resource type="AudioStream" uid="uid://b6unl8lftdf55" path="res://main/game_music.mp3" id="14_wx4yo"]
 [ext_resource type="Texture2D" uid="uid://bcs6pgv6kdbp0" path="res://main/lose_screen.png" id="15_a705r"]
 [ext_resource type="Texture2D" uid="uid://cgorme71p62fx" path="res://main/win_button.png" id="16_jwd8x"]
 [ext_resource type="Texture2D" uid="uid://drync6848svpr" path="res://main/lose_button.png" id="17_wdxnv"]
-[ext_resource type="Texture2D" uid="uid://6rrj54aw86yq" path="res://teleport_sheet.png" id="18_hhjt0"]
-[ext_resource type="AudioStream" uid="uid://w4jaimlm22yb" path="res://teleport.wav" id="19_o8aj6"]
-[ext_resource type="AudioStream" uid="uid://bo1ipm1llit6r" path="res://lose_sound.mp3" id="20_2ir04"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kem12"]
 atlas = ExtResource("10_ncgpq")
@@ -66,71 +63,71 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fithg"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(0, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_diwlc"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(32, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c6i3f"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(64, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_csfx4"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(96, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lflef"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(128, 0, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v45it"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(0, 16, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ie1f5"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(32, 16, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b8gyp"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(64, 16, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ij3ho"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(96, 16, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ppayp"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(128, 16, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6mbb4"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(0, 32, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fundu"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(32, 32, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bce57"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(64, 32, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5mxk"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(96, 32, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oxdsr"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(128, 32, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mn6cl"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(0, 48, 32, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7cmq"]
-atlas = ExtResource("13_w10s6")
+atlas = ExtResource("8_nr0ed")
 region = Rect2(32, 48, 32, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_53jgr"]
@@ -229,76 +226,8 @@ _data = {
 "main": SubResource("Animation_0e4qv")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rn7w2"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qnqnq"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2m5y"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5x2gk"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(0, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rsg3j"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jpi1y"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hiqkp"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(0, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_20in8"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(64, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g7pyb"]
-atlas = ExtResource("18_hhjt0")
-region = Rect2(128, 128, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rh5hy"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rn7w2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qnqnq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p2m5y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5x2gk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rsg3j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jpi1y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hiqkp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_20in8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g7pyb")
-}],
-"loop": false,
-"name": &"default",
-"speed": 10.0
-}]
+[sub_resource type="Theme" id="Theme_n83mg"]
+Label/font_sizes/font_size = 64
 
 [node name="root" type="Node"]
 script = ExtResource("1_a58jx")
@@ -319,66 +248,64 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -95.6
-offset_top = -87.4
-offset_right = -31.6
-offset_bottom = -71.4
+offset_left = -96.0
+offset_top = -88.0
+offset_right = -32.0
+offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 0
-disabled = true
-texture_normal = ExtResource("4_ee2d6")
+texture_normal = ExtResource("3_8anf8")
 texture_pressed = ExtResource("4_51g7t")
-texture_disabled = ExtResource("4_51g7t")
 
-[node name="Socket1" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket1" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-23.5, -45.5)
 
-[node name="Socket2" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket2" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-0.5, -45.5)
 
-[node name="Socket3" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket3" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(22.5, -45.5)
 
-[node name="Socket4" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket4" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(39.5, -30.5)
 
-[node name="Socket5" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket5" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(39.5, -7.5)
 
-[node name="Socket6" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket6" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(39.5, 15.5)
 
-[node name="Socket7" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket7" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(21.5, 30.5)
 
-[node name="Socket8" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket8" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-1.5, 30.5)
 
-[node name="Socket9" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket9" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-24.5, 30.5)
 
-[node name="Socket10" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket10" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-38.5, 15.5)
 
-[node name="Socket11" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket11" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-38.5, -7.5)
 
-[node name="Socket12" parent="WireBox" instance=ExtResource("6_qip3o")]
+[node name="Socket12" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-38.5, -30.5)
 
-[node name="WhiteCable" parent="." instance=ExtResource("7_jo1ta")]
+[node name="WhiteCable" parent="." instance=ExtResource("6_gmmhb")]
 position = Vector2(896, 344)
 color_id = 1
 
-[node name="RedCable" parent="." instance=ExtResource("7_jo1ta")]
+[node name="RedCable" parent="." instance=ExtResource("6_gmmhb")]
 position = Vector2(896, 272)
 color_id = 2
 
-[node name="BlueCable" parent="." instance=ExtResource("7_jo1ta")]
+[node name="BlueCable" parent="." instance=ExtResource("6_gmmhb")]
 position = Vector2(896, 200)
 color_id = 3
 
-[node name="TrustMeter" type="TextureProgressBar" parent="."]
+[node name="Trust" type="TextureProgressBar" parent="."]
 offset_right = 128.0
 offset_bottom = 32.0
 scale = Vector2(3, 3)
@@ -434,7 +361,26 @@ libraries = {
 }
 autoplay = "main"
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Panel" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -11.5
+offset_right = 35.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 2
+theme = SubResource("Theme_n83mg")
+text = "You Lose"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_wx4yo")
 autoplay = true
 
@@ -471,21 +417,7 @@ offset_bottom = -20.0
 grow_vertical = 0
 texture_normal = ExtResource("17_wdxnv")
 
-[node name="TeleportEffect" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(448, 397)
-scale = Vector2(5.25, 5.25)
-sprite_frames = SubResource("SpriteFrames_rh5hy")
-
-[node name="TeleportPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("19_o8aj6")
-pitch_scale = 2.0
-
-[node name="EndSoundPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("20_2ir04")
-
 [connection signal="pressed" from="WireBox/TeleportButton" to="." method="_on_teleport_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="EndScreen/WinButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="EndScreen/LoseButton" to="." method="_on_quit_button_pressed"]
-[connection signal="animation_finished" from="TeleportEffect" to="." method="_on_teleport_effect_animation_finished"]
