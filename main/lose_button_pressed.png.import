@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwk7r4qa5378n"
-path="res://.godot/imported/resume_button.png-3fbb6e8684167c741dd44ca80b8a4bba.ctex"
+uid="uid://bdm8i4ahl7djp"
+path="res://.godot/imported/lose_button_pressed.png-c32571b3149661c7b6c16bb68b684663.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resume_button.png"
-dest_files=["res://.godot/imported/resume_button.png-3fbb6e8684167c741dd44ca80b8a4bba.ctex"]
+source_file="res://main/lose_button_pressed.png"
+dest_files=["res://.godot/imported/lose_button_pressed.png-c32571b3149661c7b6c16bb68b684663.ctex"]
 
 [params]
 

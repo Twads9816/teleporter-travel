@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=63 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
@@ -20,6 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://6rrj54aw86yq" path="res://teleport_sheet.png" id="18_hhjt0"]
 [ext_resource type="AudioStream" uid="uid://w4jaimlm22yb" path="res://teleport.wav" id="19_o8aj6"]
 [ext_resource type="AudioStream" uid="uid://bo1ipm1llit6r" path="res://lose_sound.mp3" id="20_2ir04"]
+[ext_resource type="AudioStream" uid="uid://donk44o5q66f" path="res://main/tele_fail_sound2.wav" id="21_b2tjk"]
+[ext_resource type="Texture2D" uid="uid://bv2r1lt8olheb" path="res://main/pause_screen.png" id="22_v6w73"]
+[ext_resource type="Script" path="res://main/PauseMenu.gd" id="23_4hkp8"]
+[ext_resource type="Texture2D" uid="uid://bwk7r4qa5378n" path="res://main/resume_button.png" id="24_h5pic"]
+[ext_resource type="Texture2D" uid="uid://bmmpg3dig2csj" path="res://main/resume_button_pressed.png" id="25_x6p46"]
+[ext_resource type="Texture2D" uid="uid://bdm8i4ahl7djp" path="res://main/lose_button_pressed.png" id="26_tcq5a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kem12"]
 atlas = ExtResource("10_ncgpq")
@@ -484,8 +490,38 @@ pitch_scale = 2.0
 [node name="EndSoundPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("20_2ir04")
 
+[node name="WrongPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_b2tjk")
+volume_db = -5.0
+
+[node name="PauseMenu" type="Sprite2D" parent="."]
+process_mode = 3
+visible = false
+position = Vector2(453, 417)
+scale = Vector2(5, 5)
+texture = ExtResource("22_v6w73")
+script = ExtResource("23_4hkp8")
+
+[node name="ResumeButton" type="TextureButton" parent="PauseMenu"]
+offset_left = -27.0
+offset_top = -1.4
+offset_right = 2.0
+offset_bottom = 9.6
+texture_normal = ExtResource("24_h5pic")
+texture_pressed = ExtResource("25_x6p46")
+
+[node name="QuitButton" type="TextureButton" parent="PauseMenu"]
+offset_left = 8.0
+offset_top = -0.799998
+offset_right = 25.0
+offset_bottom = 10.2
+texture_normal = ExtResource("17_wdxnv")
+texture_pressed = ExtResource("26_tcq5a")
+
 [connection signal="pressed" from="WireBox/TeleportButton" to="." method="_on_teleport_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="EndScreen/WinButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="EndScreen/LoseButton" to="." method="_on_quit_button_pressed"]
 [connection signal="animation_finished" from="TeleportEffect" to="." method="_on_teleport_effect_animation_finished"]
+[connection signal="pressed" from="PauseMenu/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="PauseMenu/QuitButton" to="PauseMenu" method="_on_quit_button_pressed"]

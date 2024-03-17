@@ -124,6 +124,7 @@ func _on_teleport_effect_animation_finished():
 			$EndSoundPlayer.stream = WIN_SOUND
 			$EndSoundPlayer.play()
 	else:
+		$WrongPlayer.play()
 		trust -= 10
 		if not trust:
 			get_tree().paused = true

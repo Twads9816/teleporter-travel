@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmmpg3dig2csj"
-path="res://.godot/imported/resume_button_pressed.png-36f8a8bb2eb18f65182df73929b23c31.ctex"
+uid="uid://bv2r1lt8olheb"
+path="res://.godot/imported/pause_screen.png-ca46144819bd72cb74826c8817ca6934.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resume_button_pressed.png"
-dest_files=["res://.godot/imported/resume_button_pressed.png-36f8a8bb2eb18f65182df73929b23c31.ctex"]
+source_file="res://main/pause_screen.png"
+dest_files=["res://.godot/imported/pause_screen.png-ca46144819bd72cb74826c8817ca6934.ctex"]
 
 [params]
 
