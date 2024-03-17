@@ -1,27 +1,160 @@
-[gd_scene load_steps=8 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=32 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
 [ext_resource type="Texture2D" uid="uid://bmdkp881rrotd" path="res://main/wire_box.png" id="2_1d34e"]
 [ext_resource type="Texture2D" uid="uid://27canlwxlwh4" path="res://tele_button_unpressed.png" id="3_8anf8"]
-[ext_resource type="Texture2D" uid="uid://bav7wocvrid4i" path="res://tele_button_pressed.png" id="4_51g7t"]
+[ext_resource type="Texture2D" uid="uid://bav7wocvrid4i" path="res://main/tele_button_pressed.png" id="4_51g7t"]
 [ext_resource type="PackedScene" uid="uid://bxxv0cb2yq86m" path="res://cable/cable.tscn" id="6_gmmhb"]
-[ext_resource type="PackedScene" uid="uid://dbi7g6upedkdn" path="res://socket.tscn" id="6_slrjl"]
+[ext_resource type="PackedScene" uid="uid://dbi7g6upedkdn" path="res://socket/socket.tscn" id="6_slrjl"]
+[ext_resource type="Texture2D" uid="uid://v0rl02w8d5bw" path="res://square.png" id="8_3uhom"]
+[ext_resource type="Texture2D" uid="uid://bu4drsyh2iu07" path="res://speech_bubble.png" id="8_dkqal"]
+[ext_resource type="Texture2D" uid="uid://dkdylcyypteg4" path="res://flags_sheet.png" id="8_nr0ed"]
+[ext_resource type="Texture2D" uid="uid://ca1fatrv13uyk" path="res://trust_meter.png" id="11_qvfq0"]
+[ext_resource type="Texture2D" uid="uid://c2o6k3jv385ba" path="res://trust_bar.png" id="12_etkvf"]
+[ext_resource type="PackedScene" uid="uid://38alb0k8m0fq" path="res://customer.tscn" id="13_mvlat"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fithg"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_diwlc"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6i3f"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csfx4"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lflef"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v45it"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie1f5"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(32, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8gyp"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(64, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ij3ho"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(96, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppayp"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(128, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mbb4"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(0, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fundu"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(32, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bce57"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(64, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5mxk"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(96, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxdsr"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(128, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mn6cl"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(0, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7cmq"]
+atlas = ExtResource("8_nr0ed")
+region = Rect2(32, 48, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_53jgr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fithg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_diwlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6i3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csfx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lflef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v45it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie1f5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8gyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ij3ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppayp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mbb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fundu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bce57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5mxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxdsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mn6cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7cmq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_a58jx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(531, 328)
 scale = Vector2(5.25, 5.25)
 texture = ExtResource("1_lnon1")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="WireBox" type="Sprite2D" parent="."]
 position = Vector2(894, 325)
 scale = Vector2(5, 5)
 texture = ExtResource("2_1d34e")
 
-[node name="TextureButton" type="TextureButton" parent="Sprite2D2"]
+[node name="Button" type="TextureButton" parent="WireBox"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -36,41 +169,79 @@ grow_vertical = 0
 texture_normal = ExtResource("3_8anf8")
 texture_pressed = ExtResource("4_51g7t")
 
-[node name="Socket1" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket1" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-23.5, -45.5)
 
-[node name="Socket2" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket2" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-0.5, -45.5)
 
-[node name="Socket3" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket3" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(22.5, -45.5)
 
-[node name="Socket4" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket4" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(39.5, -30.5)
 
-[node name="Socket5" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket5" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(39.5, -7.5)
 
-[node name="Socket6" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket6" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(39.5, 15.5)
 
-[node name="Socket7" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket7" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(21.5, 30.5)
 
-[node name="Socket8" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket8" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-1.5, 30.5)
 
-[node name="Socket9" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket9" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-24.5, 30.5)
 
-[node name="Socket10" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket10" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-38.5, 15.5)
 
-[node name="Socket11" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket11" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-38.5, -7.5)
 
-[node name="Socket12" parent="Sprite2D2" instance=ExtResource("6_slrjl")]
+[node name="Socket12" parent="WireBox" instance=ExtResource("6_slrjl")]
 position = Vector2(-38.5, -30.5)
 
-[node name="Cable" parent="." instance=ExtResource("6_gmmhb")]
-position = Vector2(455, 492)
+[node name="WhiteCable" parent="." instance=ExtResource("6_gmmhb")]
+position = Vector2(896, 344)
+color_id = 1
+
+[node name="RedCable" parent="." instance=ExtResource("6_gmmhb")]
+position = Vector2(896, 272)
+color_id = 2
+
+[node name="BlueCable" parent="." instance=ExtResource("6_gmmhb")]
+position = Vector2(896, 200)
+color_id = 3
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(232, 368)
+scale = Vector2(5, 5)
+texture = ExtResource("8_dkqal")
+
+[node name="Border" type="Sprite2D" parent="Bubble"]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(-1.6, 0)
+scale = Vector2(17, 9)
+texture = ExtResource("8_3uhom")
+
+[node name="Flag" type="AnimatedSprite2D" parent="Bubble/Border"]
+scale = Vector2(0.0588235, 0.111111)
+sprite_frames = SubResource("SpriteFrames_53jgr")
+
+[node name="Trust" type="TextureProgressBar" parent="."]
+offset_right = 128.0
+offset_bottom = 32.0
+scale = Vector2(3, 3)
+value = 50.0
+texture_under = ExtResource("11_qvfq0")
+texture_progress = ExtResource("12_etkvf")
+texture_progress_offset = Vector2(23, 17)
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="Customer" parent="." instance=ExtResource("13_mvlat")]
+
+[connection signal="pressed" from="WireBox/Button" to="." method="_on_button_pressed"]

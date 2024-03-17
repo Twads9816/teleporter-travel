@@ -1,11 +1,58 @@
 extends Node2D
 
+@onready var sockets = [
+	$WireBox/Socket1,
+	$WireBox/Socket2,
+	$WireBox/Socket3,
+	$WireBox/Socket4,
+	$WireBox/Socket5,
+	$WireBox/Socket6,
+	$WireBox/Socket7,
+	$WireBox/Socket8,
+	$WireBox/Socket9,
+	$WireBox/Socket10,
+	$WireBox/Socket11,
+	$WireBox/Socket12,
+]
 
-# Called when the node enters the scene tree for the first time.
+var correct_pattern = []
+
+var flag_id = null
+
+const PATTERNS = [
+	[1,2,3,0,0,0,3,2,1,0,0,0],
+	[2,1,3,0,0,2,0,1,0,3,0,0],
+	[1,3,2,0,0,1,0,3,0,2,0,0],
+	[1,0,2,0,3,0,1,0,2,0,3,0],
+	[0,0,0,3,2,1,0,0,0,1,2,3],
+	[1,3,2,0,0,0,2,3,1,0,0,0],
+	[3,2,1,0,0,1,0,2,0,3,0,0],
+	[0,3,2,0,1,0,2,3,0,0,1,0],
+	[3,1,2,2,0,0,0,1,0,0,0,3],
+	[2,0,0,3,0,1,1,0,0,3,0,2],
+	[2,0,0,3,0,1,1,0,0,3,0,2],
+	[1,3,2,0,0,0,2,3,1,0,0,0],
+	[0,0,0,1,3,2,0,0,0,2,3,1],
+	[0,0,0,2,1,3,0,0,0,3,1,2],
+	[2,1,3,0,0,0,3,1,2,0,0,0],
+	[3,2,1,0,0,0,1,2,3,0,0,0],
+	[0,0,0,3,1,2,2,0,0,1,3,0],
+]
+
 func _ready():
-	pass # Replace with function body.
+	randomize_flag()
 
+func _unhandled_key_input(event):
+	$Customer/AnimationPlayer.play("main")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
+func _on_button_pressed():
+	if sockets.map(func(socket): return socket.color_id) == correct_pattern:
+		$Trust.value += 10
+	else:
+		$Trust.value -= 10
+	randomize_flag()
+
+func randomize_flag():
+	flag_id = randi_range(0, 16)
+	correct_pattern = PATTERNS[flag_id]
+	$Bubble/Border/Flag.frame = flag_id

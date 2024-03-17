@@ -9,11 +9,9 @@ script = ExtResource("1_8div1")
 
 [node name="Pin1" parent="." instance=ExtResource("1_6xqkp")]
 position = Vector2(-25, 0)
-scale = Vector2(1, 1)
 
 [node name="Pin2" parent="." instance=ExtResource("1_6xqkp")]
 position = Vector2(25, 0)
-scale = Vector2(1, 1)
 
 [node name="Wire" type="Line2D" parent="."]
 points = PackedVector2Array(-25, 0, 25, 0)

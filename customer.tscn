@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://38alb0k8m0fq"]
+
+[ext_resource type="Texture2D" uid="uid://ic8s860xgbom" path="res://icon.svg" id="1_s1nmn"]
+
+[sub_resource type="Animation" id="Animation_vq8if"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(174, 568)]
+}
+
+[sub_resource type="Animation" id="Animation_s7yxy"]
+resource_name = "main"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(271, 0), Vector2(271, -68)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1m17g"]
+_data = {
+"RESET": SubResource("Animation_vq8if"),
+"main": SubResource("Animation_s7yxy")
+}
+
+[node name="Customer" type="Sprite2D"]
+position = Vector2(174, 568)
+texture = ExtResource("1_s1nmn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1m17g")
+}
