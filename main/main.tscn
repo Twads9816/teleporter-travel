@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=64 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://b6unl8lftdf55" path="res://main/game_music.mp3" id="14_wx4yo"]
 [ext_resource type="Texture2D" uid="uid://bcs6pgv6kdbp0" path="res://main/lose_screen.png" id="15_a705r"]
 [ext_resource type="Texture2D" uid="uid://cgorme71p62fx" path="res://main/win_button.png" id="16_jwd8x"]
+[ext_resource type="Texture2D" uid="uid://bd7uf5lrochff" path="res://main/win_button_pressed.png" id="17_qb77j"]
 [ext_resource type="Texture2D" uid="uid://drync6848svpr" path="res://main/lose_button.png" id="17_wdxnv"]
 [ext_resource type="Texture2D" uid="uid://6rrj54aw86yq" path="res://teleport_sheet.png" id="18_hhjt0"]
 [ext_resource type="AudioStream" uid="uid://w4jaimlm22yb" path="res://teleport.wav" id="19_o8aj6"]
@@ -465,6 +466,7 @@ offset_bottom = -22.0
 grow_horizontal = 0
 grow_vertical = 0
 texture_normal = ExtResource("16_jwd8x")
+texture_pressed = ExtResource("17_qb77j")
 
 [node name="LoseButton" type="TextureButton" parent="EndScreen"]
 anchors_preset = 2
@@ -476,10 +478,11 @@ offset_right = -10.0
 offset_bottom = -20.0
 grow_vertical = 0
 texture_normal = ExtResource("17_wdxnv")
+texture_pressed = ExtResource("26_tcq5a")
 
 [node name="TeleportEffect" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(448, 397)
+position = Vector2(454, 396.25)
 scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_rh5hy")
 
@@ -497,7 +500,7 @@ volume_db = -5.0
 [node name="PauseMenu" type="Sprite2D" parent="."]
 process_mode = 3
 visible = false
-position = Vector2(453, 417)
+position = Vector2(576, 324)
 scale = Vector2(5, 5)
 texture = ExtResource("22_v6w73")
 script = ExtResource("23_4hkp8")

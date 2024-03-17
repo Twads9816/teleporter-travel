@@ -18,20 +18,16 @@ func _unhandled_input(event):
 		if event.is_action_released("click"):
 			picked = false
 			if Socket:
-				#Move
-				global_position = Socket.global_position
-				moved.emit(position)
+				move(Socket.global_position)
 				#Plug
-				Socket.color_id = color_id
+				Socket.plug(self)
 				plugged = true
 			get_viewport().set_input_as_handled()
 		elif event is InputEventMouseMotion:
-			#Move
-			global_position = get_global_mouse_position()
-			moved.emit(position)
+			move(get_global_mouse_position())
 			#Unplug
 			if plugged:
-				Socket.color_id = 0
+				Socket.unplug()
 				plugged = false
 			get_viewport().set_input_as_handled()
 
@@ -42,3 +38,13 @@ func _on_area_entered(area):
 
 func _on_area_exited(_area):
 	Socket = null
+
+
+func swap():
+	plugged = false
+	move(global_position.lerp(Vector2(894,290), 0.25))
+
+
+func move(new_position: Vector2):
+	global_position = new_position
+	moved.emit(position)

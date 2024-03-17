@@ -101,7 +101,7 @@ func move_line():
 	tween.tween_property($Line.get_child((customer_id + 1)%3), "position", Vector2(136,-80), 0.5)
 	tween.parallel().tween_property($Line.get_child((customer_id + 2)%3), "position", Vector2(0,-80), 0.5)
 	tween.parallel().tween_property($Line.get_child(customer_id), "position", Vector2(416,-80), 0.75)
-	tween.tween_property($Line.get_child(customer_id), "position", Vector2(416,-148), 0.25)
+	tween.tween_property($Line.get_child(customer_id), "position", Vector2(416,-149), 0.25)
 	tween.tween_callback($Bubble.set_visible.bind(true)).set_delay(0.5)
 	tween.tween_callback($WireBox/TeleportButton.set_disabled.bind(false))
 
