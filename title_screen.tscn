@@ -36,6 +36,11 @@ grow_vertical = 0
 scale = Vector2(5.25, 5.25)
 texture_normal = ExtResource("2_xn8yc")
 
+[node name="Flash" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="mouse_entered" from="StartGame" to="." method="_on_start_game_mouse_entered"]
 [connection signal="mouse_exited" from="StartGame" to="." method="_on_start_game_mouse_exited"]
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="timeout" from="Flash" to="." method="_on_flash_timeout"]
