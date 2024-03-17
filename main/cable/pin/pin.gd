@@ -23,7 +23,6 @@ func _unhandled_input(event):
 				moved.emit(position)
 				#Plug
 				Socket.color_id = color_id
-				Socket.pin = self
 				plugged = true
 			get_viewport().set_input_as_handled()
 		elif event is InputEventMouseMotion:
