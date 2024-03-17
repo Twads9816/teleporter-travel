@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bonx2qbcaao48"]
+
+[ext_resource type="Script" path="res://FullScreen.gd" id="1_oq0js"]
+
+[node name="FullScreen" type="CheckButton"]
+modulate = Color(0, 0, 0, 1)
+offset_right = 44.0
+offset_bottom = 24.0
+focus_mode = 0
+text = "Full Screen"
+script = ExtResource("1_oq0js")
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bri4l7ve7oyby"]
+[gd_scene load_steps=6 format=3 uid="uid://bri4l7ve7oyby"]
 
 [ext_resource type="Script" path="res://title_screen/title_screen.gd" id="1_feukj"]
 [ext_resource type="Texture2D" uid="uid://3yl72xhe3oua" path="res://title_screen/main_menu.png" id="1_kf7l7"]
 [ext_resource type="Texture2D" uid="uid://ctpaw8igsoq0f" path="res://title_screen/start_game_button.png" id="2_xn8yc"]
 [ext_resource type="AudioStream" uid="uid://bp6jn7tdc6ne5" path="res://title_screen/bananas.mp3" id="4_nr7tr"]
+[ext_resource type="PackedScene" uid="uid://bonx2qbcaao48" path="res://full_screen.tscn" id="5_8go57"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -45,6 +46,9 @@ autostart = true
 stream = ExtResource("4_nr7tr")
 volume_db = -15.0
 autoplay = true
+
+[node name="FullScreen" parent="." instance=ExtResource("5_8go57")]
+layout_mode = 1
 
 [connection signal="mouse_entered" from="StartGame" to="." method="_on_start_game_mouse_entered"]
 [connection signal="mouse_exited" from="StartGame" to="." method="_on_start_game_mouse_exited"]
