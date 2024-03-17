@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bri4l7ve7oyby"]
+[gd_scene load_steps=5 format=3 uid="uid://bri4l7ve7oyby"]
 
 [ext_resource type="Script" path="res://title_screen/title_screen.gd" id="1_feukj"]
 [ext_resource type="Texture2D" uid="uid://cu7u083vr4sf1" path="res://main_menu.png" id="1_kf7l7"]
 [ext_resource type="Texture2D" uid="uid://ctpaw8igsoq0f" path="res://start_game_button.png" id="2_xn8yc"]
+[ext_resource type="AudioStream" uid="uid://bp6jn7tdc6ne5" path="res://bananas.mp3" id="4_nr7tr"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -39,6 +40,11 @@ texture_normal = ExtResource("2_xn8yc")
 [node name="Flash" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_nr7tr")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="mouse_entered" from="StartGame" to="." method="_on_start_game_mouse_entered"]
 [connection signal="mouse_exited" from="StartGame" to="." method="_on_start_game_mouse_exited"]
