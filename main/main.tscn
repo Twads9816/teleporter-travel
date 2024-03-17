@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=35 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dkdylcyypteg4" path="res://flags_sheet.png" id="8_nr0ed"]
 [ext_resource type="Texture2D" uid="uid://ca1fatrv13uyk" path="res://trust_meter.png" id="11_qvfq0"]
 [ext_resource type="Texture2D" uid="uid://c2o6k3jv385ba" path="res://trust_bar.png" id="12_etkvf"]
-[ext_resource type="PackedScene" uid="uid://38alb0k8m0fq" path="res://customer.tscn" id="13_mvlat"]
+[ext_resource type="Texture2D" uid="uid://ic8s860xgbom" path="res://icon.svg" id="13_qagni"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fithg"]
 atlas = ExtResource("8_nr0ed")
@@ -141,6 +141,43 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_0e4qv"]
+resource_name = "main"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Line:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-208, 568), Vector2(32, 568)]
+}
+
+[sub_resource type="Animation" id="Animation_hqyw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Line:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-208, 568)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lp3ei"]
+_data = {
+"RESET": SubResource("Animation_hqyw5"),
+"main": SubResource("Animation_0e4qv")
+}
+
 [node name="root" type="Node2D"]
 script = ExtResource("1_a58jx")
 
@@ -218,6 +255,7 @@ position = Vector2(896, 200)
 color_id = 3
 
 [node name="Bubble" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(232, 368)
 scale = Vector2(5, 5)
 texture = ExtResource("8_dkqal")
@@ -242,6 +280,24 @@ texture_progress = ExtResource("12_etkvf")
 texture_progress_offset = Vector2(23, 17)
 tint_progress = Color(0, 1, 0, 1)
 
-[node name="Customer" parent="." instance=ExtResource("13_mvlat")]
+[node name="Line" type="Node2D" parent="."]
+position = Vector2(-208, 568)
+
+[node name="Customer1" type="Sprite2D" parent="Line"]
+position = Vector2(136, 0)
+texture = ExtResource("13_qagni")
+
+[node name="Customer2" type="Sprite2D" parent="Line"]
+texture = ExtResource("13_qagni")
+
+[node name="Customer3" type="Sprite2D" parent="Line"]
+position = Vector2(-136, 0)
+texture = ExtResource("13_qagni")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lp3ei")
+}
+autoplay = "main"
 
 [connection signal="pressed" from="WireBox/Button" to="." method="_on_button_pressed"]
