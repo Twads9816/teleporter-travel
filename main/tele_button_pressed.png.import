@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bav7wocvrid4i"
-path="res://.godot/imported/tele_button_pressed.png-17aa3b23e6f45b7f2eef17afb1035c08.ctex"
+path="res://.godot/imported/tele_button_pressed.png-1959da2a2b83ab583c47e07cb50b715d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tele_button_pressed.png"
-dest_files=["res://.godot/imported/tele_button_pressed.png-17aa3b23e6f45b7f2eef17afb1035c08.ctex"]
+source_file="res://main/tele_button_pressed.png"
+dest_files=["res://.godot/imported/tele_button_pressed.png-1959da2a2b83ab583c47e07cb50b715d.ctex"]
 
 [params]
 

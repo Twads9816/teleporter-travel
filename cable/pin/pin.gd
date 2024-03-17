@@ -2,26 +2,37 @@ extends Area2D
 
 signal moved(new_position: Vector2)
 
-var _picked: bool = false
+var picked: bool = false
 var Socket = null
+var color_id = 0
+var plugged: bool = false
 
 func _input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
-		_picked = true
+		picked = true
 		get_viewport().set_input_as_handled()
 
 
 func _unhandled_input(event):
-	if _picked:
+	if picked:
 		if event.is_action_released("click"):
-			_picked = false
-			if Socket:
+			picked = false
+			if Socket and not Socket.color_id:
+				#Move
 				global_position = Socket.global_position
 				moved.emit(position)
+				#Plug
+				Socket.color_id = color_id
+				plugged = true
 			get_viewport().set_input_as_handled()
 		elif event is InputEventMouseMotion:
+			#Move
 			global_position = get_global_mouse_position()
 			moved.emit(position)
+			#Unplug
+			if plugged:
+				Socket.color_id = 0
+				plugged = false
 			get_viewport().set_input_as_handled()
 
 
