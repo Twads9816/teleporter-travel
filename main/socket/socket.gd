@@ -5,7 +5,7 @@ var color_id: int = 0
 var Pin: Area2D
 
 func plug(new_pin: Area2D):
-	if Pin:
+	if Pin and Pin != new_pin:
 		Pin.swap()
 	Pin = new_pin
 	color_id = new_pin.color_id

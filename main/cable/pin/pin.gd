@@ -1,6 +1,7 @@
 extends Area2D
 
 signal moved(new_position: Vector2)
+signal inserted()
 
 var picked: bool = false
 var Socket = null
@@ -18,10 +19,7 @@ func _unhandled_input(event):
 		if event.is_action_released("click"):
 			picked = false
 			if Socket:
-				move(Socket.global_position)
-				#Plug
-				Socket.plug(self)
-				plugged = true
+				insert()
 			get_viewport().set_input_as_handled()
 		elif event is InputEventMouseMotion:
 			move(get_global_mouse_position())
@@ -48,3 +46,9 @@ func swap():
 func move(new_position: Vector2):
 	global_position = new_position
 	moved.emit(position)
+
+
+func insert():
+	move(Socket.global_position)
+	Socket.plug(self)
+	plugged = true

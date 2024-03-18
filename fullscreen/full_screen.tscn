@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bonx2qbcaao48"]
 
-[ext_resource type="Script" path="res://FullScreen.gd" id="1_oq0js"]
+[ext_resource type="Script" path="res://fullscreen/FullScreen.gd" id="1_oq0js"]
 
 [node name="FullScreen" type="CheckButton"]
 modulate = Color(0, 0, 0, 1)

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://w4jaimlm22yb"
-path="res://.godot/imported/teleport.wav-d4f9154342a9e0dc9befff05a15b7500.sample"
+path="res://.godot/imported/teleport.wav-40dc50610cf984d14a1b7078b8d9acee.sample"
 
 [deps]
 
-source_file="res://teleport.wav"
-dest_files=["res://.godot/imported/teleport.wav-d4f9154342a9e0dc9befff05a15b7500.sample"]
+source_file="res://main/teleport.wav"
+dest_files=["res://.godot/imported/teleport.wav-40dc50610cf984d14a1b7078b8d9acee.sample"]
 
 [params]
 

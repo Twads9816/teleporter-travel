@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=64 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://cgorme71p62fx" path="res://main/win_button.png" id="16_jwd8x"]
 [ext_resource type="Texture2D" uid="uid://bd7uf5lrochff" path="res://main/win_button_pressed.png" id="17_qb77j"]
 [ext_resource type="Texture2D" uid="uid://drync6848svpr" path="res://main/lose_button.png" id="17_wdxnv"]
-[ext_resource type="Texture2D" uid="uid://6rrj54aw86yq" path="res://main/teleport_sheet.png" id="18_hhjt0"]
+[ext_resource type="Texture2D" uid="uid://6rrj54aw86yq" path="res://teleport_sheet.png" id="18_hhjt0"]
 [ext_resource type="AudioStream" uid="uid://w4jaimlm22yb" path="res://main/teleport.wav" id="19_o8aj6"]
 [ext_resource type="AudioStream" uid="uid://bo1ipm1llit6r" path="res://main/lose_sound.mp3" id="20_2ir04"]
 [ext_resource type="AudioStream" uid="uid://donk44o5q66f" path="res://main/tele_fail_sound2.wav" id="21_b2tjk"]
@@ -27,10 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://bwk7r4qa5378n" path="res://main/resume_button.png" id="24_h5pic"]
 [ext_resource type="Texture2D" uid="uid://bmmpg3dig2csj" path="res://main/resume_button_pressed.png" id="25_x6p46"]
 [ext_resource type="Texture2D" uid="uid://bdm8i4ahl7djp" path="res://main/lose_button_pressed.png" id="26_tcq5a"]
-[ext_resource type="Texture2D" uid="uid://ewi8inyj233f" path="res://main/rules_button.png" id="28_r31x4"]
-[ext_resource type="Texture2D" uid="uid://gsoj8gj1n3a5" path="res://main/rules_button_pressed.png" id="29_mut6r"]
-[ext_resource type="Texture2D" uid="uid://l21x4538wmda" path="res://main/rules.png" id="30_wmojd"]
-[ext_resource type="PackedScene" uid="uid://bonx2qbcaao48" path="res://fullscreen/full_screen.tscn" id="31_ojqxs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kem12"]
 atlas = ExtResource("10_ncgpq")
@@ -54,7 +50,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kem12")
 }],
-"loop": false,
+"loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -233,42 +229,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-208, 568), Vector2(32, 568)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Line/Customer1:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"walk", &"idle"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Line/Customer2:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"walk", &"idle"]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Line/Customer3:animation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [&"walk", &"idle"]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lp3ei"]
 _data = {
@@ -426,10 +386,8 @@ position = Vector2(896, 200)
 color_id = 3
 
 [node name="TrustMeter" type="TextureProgressBar" parent="."]
-offset_left = -24.0
-offset_top = 32.0
-offset_right = 104.0
-offset_bottom = 64.0
+offset_right = 128.0
+offset_bottom = 32.0
 scale = Vector2(3, 3)
 value = 50.0
 texture_under = ExtResource("8_45rat")
@@ -445,7 +403,6 @@ position = Vector2(136, -80)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_t3e64")
 animation = &"idle"
-autoplay = "walk"
 offset = Vector2(1.5, 0)
 
 [node name="Customer2" type="AnimatedSprite2D" parent="Line"]
@@ -453,7 +410,6 @@ position = Vector2(1.52588e-05, -80)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_t3e64")
 animation = &"idle"
-autoplay = "walk"
 offset = Vector2(1.5, 0)
 
 [node name="Customer3" type="AnimatedSprite2D" parent="Line"]
@@ -461,7 +417,6 @@ position = Vector2(-136, -80)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_t3e64")
 animation = &"idle"
-autoplay = "walk"
 offset = Vector2(1.5, 0)
 
 [node name="Bubble" type="Sprite2D" parent="."]
@@ -542,30 +497,6 @@ stream = ExtResource("20_2ir04")
 stream = ExtResource("21_b2tjk")
 volume_db = -5.0
 
-[node name="RulesButton" type="TextureButton" parent="."]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -24.0
-offset_top = -64.0
-offset_right = -8.0
-offset_bottom = -43.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(5, 5)
-pivot_offset = Vector2(16, 21)
-toggle_mode = true
-texture_normal = ExtResource("28_r31x4")
-texture_pressed = ExtResource("29_mut6r")
-
-[node name="Rules" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(576, 324)
-scale = Vector2(7, 7)
-texture = ExtResource("30_wmojd")
-
 [node name="PauseMenu" type="Sprite2D" parent="."]
 process_mode = 3
 visible = false
@@ -590,15 +521,10 @@ offset_bottom = 10.2
 texture_normal = ExtResource("17_wdxnv")
 texture_pressed = ExtResource("26_tcq5a")
 
-[node name="FullScreen" parent="." instance=ExtResource("31_ojqxs")]
-offset_right = 132.0
-offset_bottom = 31.0
-
 [connection signal="pressed" from="WireBox/TeleportButton" to="." method="_on_teleport_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="EndScreen/WinButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="EndScreen/LoseButton" to="." method="_on_quit_button_pressed"]
 [connection signal="animation_finished" from="TeleportEffect" to="." method="_on_teleport_effect_animation_finished"]
-[connection signal="toggled" from="RulesButton" to="." method="_on_rules_button_toggled"]
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="PauseMenu" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/QuitButton" to="PauseMenu" method="_on_quit_button_pressed"]

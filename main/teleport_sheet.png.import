@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6rrj54aw86yq"
-path="res://.godot/imported/teleport_sheet.png-7f6c0a0c33c4ad8b2e9849a467ad6e69.ctex"
+path="res://.godot/imported/teleport_sheet.png-b74c1e34ad428be92ab6d5c4a73b7304.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://teleport_sheet.png"
-dest_files=["res://.godot/imported/teleport_sheet.png-7f6c0a0c33c4ad8b2e9849a467ad6e69.ctex"]
+source_file="res://main/teleport_sheet.png"
+dest_files=["res://.godot/imported/teleport_sheet.png-b74c1e34ad428be92ab6d5c4a73b7304.ctex"]
 
 [params]
 
