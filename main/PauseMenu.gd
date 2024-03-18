@@ -1,11 +1,10 @@
 extends Sprite2D
 
 
-func _input(event):
-	if event.is_action_released("esc"):
-		$ResumeButton.visible = true
-		$QuitButton.visible = true
+func _unhandled_key_input(event):
+	if event.is_action_released("pause"):
 		toggle_pause()
+		get_viewport().set_input_as_handled()
 
 
 func toggle_pause():

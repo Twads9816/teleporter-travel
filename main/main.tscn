@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://dulu0one6cl4i"]
+[gd_scene load_steps=67 format=3 uid="uid://dulu0one6cl4i"]
 
 [ext_resource type="Script" path="res://main/main.gd" id="1_a58jx"]
 [ext_resource type="Texture2D" uid="uid://b56iyxujulh2t" path="res://main/background.png" id="1_lnon1"]
@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://27canlwxlwh4" path="res://main/tele_button_unpressed.png" id="4_ee2d6"]
 [ext_resource type="PackedScene" uid="uid://dbi7g6upedkdn" path="res://main/socket/socket.tscn" id="6_qip3o"]
 [ext_resource type="PackedScene" uid="uid://bxxv0cb2yq86m" path="res://main/cable/cable.tscn" id="7_jo1ta"]
-[ext_resource type="Texture2D" uid="uid://v0rl02w8d5bw" path="res://square.png" id="8_3uhom"]
 [ext_resource type="Texture2D" uid="uid://ca1fatrv13uyk" path="res://main/trust_meter.png" id="8_45rat"]
 [ext_resource type="Texture2D" uid="uid://c2o6k3jv385ba" path="res://main/trust_bar.png" id="9_h0ka3"]
 [ext_resource type="Texture2D" uid="uid://q7avnfe6bhui" path="res://main/person_sheet.png" id="10_ncgpq"]
 [ext_resource type="Texture2D" uid="uid://bu4drsyh2iu07" path="res://main/speech_bubble.png" id="11_gkyl7"]
+[ext_resource type="Texture2D" uid="uid://v0rl02w8d5bw" path="res://main/square.png" id="12_ei4mi"]
 [ext_resource type="Texture2D" uid="uid://dkdylcyypteg4" path="res://main/flags_sheet.png" id="13_w10s6"]
 [ext_resource type="AudioStream" uid="uid://b6unl8lftdf55" path="res://main/game_music.mp3" id="14_wx4yo"]
 [ext_resource type="Texture2D" uid="uid://bcs6pgv6kdbp0" path="res://main/lose_screen.png" id="15_a705r"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://ewi8inyj233f" path="res://main/rules_button.png" id="28_r31x4"]
 [ext_resource type="Texture2D" uid="uid://gsoj8gj1n3a5" path="res://main/rules_button_pressed.png" id="29_mut6r"]
 [ext_resource type="Texture2D" uid="uid://l21x4538wmda" path="res://main/rules.png" id="30_wmojd"]
-[ext_resource type="PackedScene" uid="uid://bonx2qbcaao48" path="res://fullscreen/full_screen.tscn" id="31_ojqxs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kem12"]
 atlas = ExtResource("10_ncgpq")
@@ -474,7 +473,7 @@ texture = ExtResource("11_gkyl7")
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(-1.6, 0)
 scale = Vector2(17, 9)
-texture = ExtResource("8_3uhom")
+texture = ExtResource("12_ei4mi")
 
 [node name="Flag" type="AnimatedSprite2D" parent="Bubble/Border"]
 scale = Vector2(0.0588235, 0.111111)
@@ -589,10 +588,6 @@ offset_right = 25.0
 offset_bottom = 10.2
 texture_normal = ExtResource("17_wdxnv")
 texture_pressed = ExtResource("26_tcq5a")
-
-[node name="FullScreen" parent="." instance=ExtResource("31_ojqxs")]
-offset_right = 132.0
-offset_bottom = 31.0
 
 [connection signal="pressed" from="WireBox/TeleportButton" to="." method="_on_teleport_button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

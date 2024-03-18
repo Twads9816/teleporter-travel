@@ -2,7 +2,6 @@ extends Control
 @onready var button = $StartGame
 @onready var timer = $Flash
 
-const MainScene = preload("res://main/main.tscn")
 
 func _ready():
 	get_tree().paused = false
@@ -17,7 +16,7 @@ func _on_start_game_mouse_exited():
 
 
 func _on_start_game_pressed():
-	get_tree().change_scene_to_packed(MainScene)
+	get_tree().change_scene_to_file("res://main/main.tscn")
 
 
 func _on_flash_timeout():
